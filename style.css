@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+:root{
+    /* (Full Slider Bar) */
+    --Soft-Cyan : hsl(174, 77%, 80%);
+
+    /* (Slider Backround) */
+    --Strong-Cyan : hsl(174, 86%, 45%);
+
+    /* (Discount Background) */
+    --Light-Grayish-Red : hsl(14, 92%, 95%);
+
+    /* (Discount Text) */
+    --Light-Red : hsl(15, 100%, 70%);
+
+    /* (CTA Text) */
+    --Pale-Blue : hsl(226, 100%, 87%);
+
+    /* (Pricing Component Background) */
+    --White : hsl(0, 0%, 100%);
+
+    /* (Main Background) */
+    --Very-Pale-Blue : hsl(230, 100%, 99%);
+
+    /* (Empty Slider Bar) */
+    --Light-Grayish-Blue : hsl(224, 65%, 95%);
+
+    /* (Toggle Background) */
+    --Light-Grayish-Blue : hsl(223, 50%, 87%);
+
+    /* (Text) */
+    --Grayish-Blue : hsl(225, 20%, 60%);
+
+    /* (Text & CTA Background) */
+    --Dark-Desaturated-Blue : hsl(227, 35%, 25%);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    min-height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    background: url('./images/bg-pattern.svg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-color: var(--Very-Pale-Blue);
+}
+
+.head{
+    text-align: center;
+    padding: 6rem 1.5rem;
+    background: url('./images/pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-position: center top 4.7rem;
+    background-size: 16.5rem 16.5rem;
+}
+
+.title{
+    font-size: 2.25rem;
+    color: var(--Dark-Desaturated-Blue);
+    margin: 2rem 0 1.5rem;
+    font-weight: bold;
+}
+
+.head-txt{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--Grayish-Blue );
+}
+
+.head-txt span{
+    margin-top: .5rem;
+    display: block;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    background-color: var(--White);
+    border-radius: 1rem;
+    padding: 2.5rem 0;
+    box-shadow: 0 10px 10px -10px var(--Grayish-Blue);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-areas: 'title'
+    'bar'
+    'price';
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+}
+
+.sub-title{
+    grid-area:title ;
+    font-size: 2rem;
+    color:var(--Grayish-Blue) ;
+    text-transform: uppercase;
+}
+
+.container-bar{
+    grid-area: bar;
+    height: .8rem;
+    width: 100%;
+    background-color: var(--Light-Grayish-Blue);
+    border-radius: 1rem;
+    margin: 4rem 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.bar{
+    height: 100%;
+    width: 50%;
+    background-color: var(--Soft-Cyan);
+    border-radius: 1rem;
+}
+
+.icon{
+    position: absolute;
+    top: -2.2rem;
+    left: 50%;
+    display: grid;
+    place-items: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    box-shadow: 0 20px 40px -6px var(--Strong-Cyan);
+    background-color: var(--Strong-Cyan);
+}
+
+.price-card,
+.discount-card,
+.method,
+.label-bill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.month{
+    color: var(--Grayish-Blue);
+    font-size: 1.5rem;
+}
+
+.price{
+    color:var(--Dark-Desaturated-Blue);
+    font-size: 3rem;
+}
+
+.price-card{
+    grid-area: price;
+}
+
+.method{
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.label-bill,
+.year{
+    color: var(--Grayish-Blue);
+    font-size: 1.5rem;
+}
+
+.input-bill{
+    appearance: none;
+    outline: none;
+    width: 4rem;
+    height: 2rem;
+    border-radius: .9rem;
+    background-color: var(--Light-Grayish-Blue);
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.input-bill::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--White);
+}
+
+.input-bill:checked{
+    background-color: var(--Strong-Cyan);
+}
+
+.input-bill:checked:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--White);
+}
+
+.discount{
+    color: var(--Light-Red);
+    background-color: var(--Light-Grayish-Red);
+    border-radius: 1rem;
+    padding: .1rem .5rem;
+    font-size: 1.5rem;
+}
+
+.line{
+    height: .1rem;
+    background-color: var(--Grayish-Blue);
+    margin: 3rem 0;
+}
+
+.list{
+    list-style: none;
+}
+
+.feature{
+    font-size: 1.5rem;
+    color: var(--Grayish-Blue);
+    margin: 1rem 0;
+}
+
+.check{
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: .5rem;
+}
+
+.btn{
+    background-color: var(--Dark-Desaturated-Blue);
+    color: var(--Pale-Blue);
+    padding: .7rem 2rem;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2rem;
+    margin: 2rem 0;
+}
+
+footer{
+    width: 90%;
+    padding: 0 1.5rem;
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    margin: 2rem auto;
+    font-size: 1.5rem;
+    color: var(--Grayish-Blue);
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--Light-Red);
+}
+
+.none{
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+    .head{
+        max-width: 600px;
+        padding-bottom: 10rem;
+        margin: auto;
+    }
+
+    .head-txt span{
+        display: inline-block;
+    }
+
+    .container{
+        max-width: 600px;
+    }
+
+    .grid{
+        grid-template-areas: 'title price'
+        'bar bar';
+        margin: 2rem 0 3rem;
+    }
+
+    .price-card,
+    .discount-card,
+    .method,
+    .label-bill{
+        gap: 2rem;
+    }
+
+    .price-card{
+        gap: .5rem;
+    }
+
+    .sub-title{
+        margin-top: .5rem;
+    }
+
+    .discount-span{
+        display: inline-block;
+    }
+
+    .features{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        text-align: left;
+        padding: 0 1.5rem;
+        margin: 2rem 0;
+    }
+
+}

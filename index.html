@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <!-- ------------- CSS LINK --------- -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="head">
+      <h1 class="title">
+        Simple, traffic-based pricing
+      </h1>
+      <p class="head-txt">
+        Sign-up for our 30-day trial.
+        <span>No credit card required.</span>
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="grid">
+        <h3 class="sub-title">
+          <span class="page-views">313</span>k Pageviews
+        </h3>
+        <div class="container-bar">
+          <div class="bar">
+            </div>
+            <div class="icon">
+              <img src="images/icon-slider.svg" alt="slider">
+          </div>
+        </div>
+        <div class="price-card">
+          <strong class="price">$50.00</strong>
+          <span class="month">/month</span>
+        </div>
+      </div>
+      <div class="method">
+        <label for="" class="label-bill">
+          Monthly Billing
+          <input type="checkbox" name="bill" id="bill" class="input-bill">
+        </label>
+        <div class="discount-card">
+          <p class="year">Yearly Billing</p>
+          <p class="discount">-25%
+            <span class="none discount-span">discount</span>
+          </p>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="features">
+        <ul class="list">
+          <li class="feature">
+            <img src="images/icon-check.svg" alt="check" class="check">
+            Unlimited websites</li>
+          <li class="feature">
+            <img src="images/icon-check.svg" alt="check" class="check">
+            100% data ownership</li>
+          <li class="feature">
+            <img src="images/icon-check.svg" alt="check" class="check">
+            Email reports</li>
+        </ul>
+        <button class="btn">Start my trial</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/eddybpro">Eddybpro</a>.
+    </p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
